@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Pages;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,10 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/', [Pages::class, 'index']);
+Route::get('/profil', [Pages::class, 'profil']);
+Route::get('/foto', [Pages::class, 'foto']);
+Route::get('/video', [Pages::class, 'video']);
+Route::get('/agenda', [Pages::class, 'agenda']);
+Route::get('/pengumuman', [Pages::class, 'pengumuman']);
