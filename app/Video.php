@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Galeri extends Model
+class Video extends Model
 {
-    
+    protected $table = 'video';
 }
