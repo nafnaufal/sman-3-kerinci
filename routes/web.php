@@ -28,4 +28,5 @@ Route::get('/profil', [Pages::class, 'profil']);
 Route::get('/foto', [Pages::class, 'foto']);
 Route::get('/video', [Pages::class, 'video']);
 Route::get('/agenda', [Pages::class, 'agenda']);
+Route::get('/guru', [Pages::class, 'guru']);
 Route::get('/pengumuman', [Pages::class, 'pengumuman']);

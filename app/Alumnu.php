@@ -5,8 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Video extends Model
+class Alumnu extends Model
 {
-    protected $table = 'video';
+    protected $table = 'alumnu';
     protected $guarded = ['id'];
 }
