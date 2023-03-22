@@ -12,7 +12,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded">
                         <div>
-                            <img class="img-fluid" id="myImg" src="img/service-1.jpg" alt="Snow"
+                            <img class="img-fluid image" src="img/service-1.jpg" alt="Snow"
                                 style="width:100%;max-width:300px">
                         </div>
                     </div>
@@ -20,7 +20,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded">
                         <div>
-                            <img class="img-fluid" id="myImg" src="img/service-2.jpg" alt="Snow"
+                            <img class="img-fluid image" src="img/service-2.jpg" alt="Snow"
                                 style="width:100%;max-width:300px">
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded">
                         <div>
-                            <img class="img-fluid" id="myImg" src="img/service-3.jpg" alt="Snow"
+                            <img class="img-fluid image" src="img/service-3.jpg" alt="Snow"
                                 style="width:100%;max-width:300px">
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded">
                         <div>
-                            <img class="img-fluid" id="myImg" src="img/service-4.jpg" alt="Snow"
+                            <img class="img-fluid image" src="img/service-4.jpg" alt="Snow"
                                 style="width:100%;max-width:300px">
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded">
                         <div>
-                            <img class="img-fluid" id="myImg" src="img/service-5.jpg" alt="Snow"
+                            <img class="img-fluid image" src="img/service-5.jpg" alt="Snow"
                                 style="width:100%;max-width:300px">
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded">
                         <div>
-                            <img class="img-fluid" id="myImg" src="img/service-6.jpg" alt="Snow"
+                            <img class="img-fluid image" src="img/service-6.jpg" alt="Snow"
                                 style="width:100%;max-width:300px">
                         </div>
                     </div>
@@ -74,14 +74,18 @@
         var modal = document.getElementById("myModal");
 
         // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById("myImg");
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+        
+        var img = document.querySelectorAll(".image");
+        img.forEach(item => {
+            item.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
         }
+        );
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
